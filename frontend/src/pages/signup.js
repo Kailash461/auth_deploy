@@ -31,7 +31,7 @@ const handlesignup=async (e)=>{
         return handleError('All fields are required')
     }
     try{
-           const url="http://localhost:1024/auth/signup"
+           const url="https://auth-deploy-api.vercel.app/auth/signup"
            const response = await fetch(url,{
             method:"POST",
             headers:{
