@@ -1,0 +1,131 @@
+/* Global Reset: More Specific and Limited */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Flexbox for Centering Content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; /* Light background to enhance form */
+}
+
+/* Container Styles for Form */
+.container {
+  background-color: #fff;
+  padding: 32px 48px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.container > h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form Styles */
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Styles */
+.container input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.container input:focus {
+  border-color: purple;
+  box-shadow: 0 0 5px rgba(128, 0, 128, 0.5); /* Light purple shadow on focus */
+}
+
+.container input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Button Styles */
+button {
+  background-color: purple;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5e2a92; /* Darker shade on hover */
+}
+
+/* Link Styles */
+span a {
+  color: purple;
+  text-decoration: none;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+
+/* Toastify Container: Prevent Global Styles Impacting Toast */
+.Toastify__toast-container {
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.Toastify__toast {
+  width: 320px !important;
+  font-size: 14px;
+  padding: 12px !important;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Toastify__toast--error {
+  background-color: #ff4d4d; /* Red background for error */
+}
+
+.Toastify__toast--success {
+  background-color: #4caf50; /* Green background for success */
+}
+
+/* Small devices (e.g., phones) */
+@media (max-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
