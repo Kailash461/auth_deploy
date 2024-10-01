@@ -22,7 +22,7 @@ const handleLogout=(e)=>{
 }
 const fetchProducts=async ()=>{
   try{
-     const url ="http://localhost:1024/products";
+     const url ="https://auth-deploy-api.vercel.app/products";
      const headers={
       headers:{
         'Authorization':localStorage.getItem('token')
